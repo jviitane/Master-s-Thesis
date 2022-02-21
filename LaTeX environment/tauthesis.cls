@@ -32,14 +32,15 @@
 
 %%%%% CLASS OPTIONS %%%%%
 
-\newcommand{\@mainlanguage}{finnish}
-\newcommand{\@otherlanguage}{english}
+\newcommand{\@mainlanguage}{english}
+\newcommand{\@otherlanguage}{finnish}
 \newcommand{\@citationstyle}{numeric}
 \newcommand{\@citationsorting}{none}
 \newif\if@customcitation\@customcitationtrue
 \newif\if@apacitation\@apacitationfalse
 
-\newif\if@langenglish\@langenglishfalse
+\newif\if@langenglish\@langenglishtrue
+% \newif\if@langenglish\@langenglishfalse
 \newif\if@taunotdraftmode\@taunotdraftmodetrue
 \newif\if@programs\@programsfalse
 
@@ -49,11 +50,11 @@
     \renewcommand{\@mainlanguage}{english}
     \renewcommand{\@otherlanguage}{finnish}
 }
-\DeclareOption{finnish}{%
-    \@langenglishfalse
-    \renewcommand{\@mainlanguage}{finnish}
-    \renewcommand{\@otherlanguage}{english}
-}
+% \DeclareOption{finnish}{%
+%     \@langenglishfalse
+%     \renewcommand{\@mainlanguage}{finnish}
+%     \renewcommand{\@otherlanguage}{english}
+% }
 
 % Citation style selection.
 \DeclareOption{numeric}{%

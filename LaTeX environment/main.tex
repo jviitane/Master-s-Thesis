@@ -68,8 +68,8 @@
 % The appropriate Finnish language code is 'fi',
 % UK English is en-UK
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
-\Title{Title}
-\Author{Firstname Lastname}
+\Title{Master's Thesis}
+\Author{Joona Viitanen}
 \Language{en-US}
 \end{filecontents*}
 
@@ -90,7 +90,7 @@
 %   programs - if you wish to display code snippets
 % Example: \documentclass[english, authoryear]{tauthesis}
 %          thesis in English with author-year citations
-\documentclass{tauthesis}
+\documentclass[english, authoryear, draft]{tauthesis}
 
 % The glossaries package throws a warning:
 % No language module detected for 'finnish'.
@@ -233,11 +233,12 @@
 % the primary language as the first argument
 % and its translation to the secondary language
 % as the second.
-\title{Kuvaava otsikko}{A Descriptive Title}
-\subtitle{Tarkentava alaotsikko}{A Specifying Subtitle}
+\title{Forecasting investor group behavior using neural networks (working title)}
+{Sijoittajajoukkojen käyttäytymisen ennustaminen neuroverkkojen avulla (työotsikko)}
+\subtitle{subtitle}{subtitle}
 
 % The author name.
-\author{Etunimi Sukunimi}
+\author{Joona Viitanen}
 
 % The examiner information.
 % If your work has multiple examiners, replace with
@@ -246,27 +247,28 @@
 % e.g. Examiners or Tarkastajat, and <name>s are
 % replaced by the examiner names, each on their
 % separate line.
-\examiner[Tarkastajat]{Prof. Proffa Proffanen}
+\examiner[Examiners]{Prof. Juho Kanniainen \\ Dr. Ke˛stutis Baltakys}
 
 % The finishing date of the thesis (YYYY-MM-DD).
-\finishdate{2021}{06}{24}
+\finishdate{2022}{05}{31}
 
 % The type of the thesis (e.g. Kandidaatintyö
 % or Master of Science Thesis) in the primary
 % and the secondary languages of the thesis.
-\thesistype{Opinnäytetyön taso}{Thesis type}
+\thesistype{Master's Thesis}{Diplomityö}
 
 % The faculty and degree programme names in
 % the primary and the secondary languages of
 % the thesis.
-\facultyname{Tiedekunnan nimi}{Faculty Name}
-\programmename{Tutkinto-ohjelma}{Degree Programme}
+\facultyname{Faculty of Management and Business}{Johtamisen ja talouden tiedekunta}
+\programmename{Master’s Degree Programme in Industrial Engineering and Management
+}{Tuotantotalouden diplomi-insinöörin tutkinto-ohjelma}
 
 % The keywords to the thesis in the primary and
 % the secondary languages of the thesis
 \keywords%
-    {avainsana, avainsana, avainsana, avainsana, avainsana}
     {keyword, keyword, keyword, keyword, keyword}
+    {avainsana, avainsana, avainsana, avainsana, avainsana}
 
 \maketitle
 
@@ -282,9 +284,9 @@
 % first abstract. The second argument of
 % the \preface command takes the place where
 % the thesis was signed in.
-\abstract{tex/tiivistelma.tex}
-\otherabstract{tex/abstract.tex}
-\preface{tex/alkusanat.tex}{Tampereella}
+\abstract{tex/abstract.tex}
+\otherabstract{tex/tiivistelma.tex}
+\preface{tex/preface.tex}{Tampere}
 
 %%%%% Table of contents.
 
@@ -329,24 +331,17 @@
 % They can be \input as shown below. Give both
 % the chapters and their files as descriptive
 % names as possible.
-\chapter{Johdanto}
-\label{ch:johdanto}
+\chapter{Introduction}
+\label{ch:introduction}
 
-\input{tex/johdanto.tex}
+\input{tex/introduction.tex}
 
-\chapter{Esitystyyli}
-\label{ch:esitystyyli}
-\input{tex/esitystyyli.tex}
-
-\chapter{Viittaustekniikat}
-\label{ch:viittaustekniikat}
-\input{tex/viittaustekniikat.tex}
 
 % Add chapters similarly.
 
-\chapter{Yhteenveto}
-\label{ch:yhteenveto}
-\input{tex/yhteenveto.tex}
+\chapter{Conclusion}
+\label{ch:conclusion}
+\input{tex/conclusion.tex}
 
 %%%%% Bibliography/references.
 
@@ -365,9 +360,9 @@
 
 \begin{appendices}
 
-\chapter{Esimerkkiliite}
-\label{ch:liite}
-\input{./tex/liite.tex}
+\chapter{Example appendix}
+\label{ch:appendix}
+\input{./tex/appendix.tex}
 
 \end{appendices}
 
